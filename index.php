@@ -16,3 +16,42 @@
         </a>
     </div>
 </section>
+
+<!-- about us section  -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Bagian Gambar -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="image-container">
+                    <img src="assets/image/roti.jpg" class="img-fluid img-1" alt="Croissant">
+                    <img src="assets/image/roti2.jpg" class="img-fluid img-2" alt="Sliced Bread">
+                </div>
+            </div>
+
+            <!-- Bagian Konten -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <p class="section-subtitle">ABOUT US</p>
+                <h2 class="section-title">We Bake Every Item From The Core Of Our Hearts</h2>
+                <p>
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+                </p>
+                <p>
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                </p>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <p>✔ Quality Products</p>
+                        <p>✔ Online Order</p>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <p>✔ Custom Products</p>
+                        <p>✔ Home Delivery</p>
+                    </div>
+                </div>
+                <a href="/web-crunchybite/about.php" class="btn btn-primary" data-aos="zoom-in">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
