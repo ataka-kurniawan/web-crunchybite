@@ -55,3 +55,69 @@
         </div>
     </div>
 </section>
+
+<section class="services-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Kolom Kiri -->
+            <div class="col-md-6" data-aos="fade-right">
+                <h1 class="mb-3">What Do We Offer For You?</h1>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+
+                <div class="row">
+                    <!-- Layanan 1 -->
+                    <div class="col-md-6" data-aos="flip-left">
+                        <div class="service-item">
+                            <div class="service-icon">📦</div>
+                            <div class="service-text">
+                                <h5>Quality Products</h5>
+                                <p>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layanan 2 -->
+                    <div class="col-md-6" data-aos="flip-right">
+                        <div class="service-item">
+                            <div class="service-icon">🎨</div>
+                            <div class="service-text">
+                                <h5>Custom Products</h5>
+                                <p>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Layanan 3 -->
+                    <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                        <div class="service-item">
+                            <div class="service-icon">🛒</div>
+                            <div class="service-text">
+                                <h5>Online Order</h5>
+                                <p>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layanan 4 -->
+                    <div class="col-md-6" data-aos="flip-right" data-aos-delay="200">
+                        <div class="service-item">
+                            <div class="service-icon">🚚</div>
+                            <div class="service-text">
+                                <h5>Home Delivery</h5>
+                                <p>Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan -->
+            <div class="col-md-6 text-center d-none d-md-block" data-aos="fade-left">
+                <div class="service-img">
+                    <img src="assets/image/roti3.jpg" alt="Service Image">
+                </div>
+            </div>
+        </div>
+</section>
