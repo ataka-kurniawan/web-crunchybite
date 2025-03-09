@@ -121,3 +121,82 @@
             </div>
         </div>
 </section>
+
+<!-- section product -->
+<section class="product-section">
+    <div class="container">
+        <h1>Our Products</h1>
+        <p>Discover our high-quality and best-selling products</p>
+
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 1">
+                                <h5>Product 1</h5>
+                                <p>$25.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 2">
+                                <h5>Product 2</h5>
+                                <p>$30.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 3">
+                                <h5>Product 3</h5>
+                                <p>$20.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 4">
+                                <h5>Product 4</h5>
+                                <p>$28.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 5">
+                                <h5>Product 5</h5>
+                                <p>$22.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <div class="product-item">
+                                <img src="assets/image/roti.jpg" alt="Product 6">
+                                <h5>Product 6</h5>
+                                <p>$35.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+   <a href="/web-crunchybite/product.php"> <button type="button" class="btn btn-primary mt-5 px-4">Lihat Produk</button></a>
+</section>
+
+<?php include 'includes/footer.php' ?>mak
