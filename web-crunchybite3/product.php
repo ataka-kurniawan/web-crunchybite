@@ -4,9 +4,8 @@
     <div class="hero-d-content" data-aos="fade-up" data-aos-duration="1000">
         <h3>Selamat Datang di</h3>
         <h1>CrunchyBite Store</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, cupiditate.</p>
-        <a href="#product" class="btn-cta px-4 py-2 rounded-pill text-light mt-3" onclick="alert('halo saya ataka putu samsuri kurniawan dengan nim 2211103129')">
-            Shop Now</a>
+        <p>Temukan berbagai produk terbaik hanya di sini.</p>
+        <a href="#product" class="btn-cta px-4 py-2 rounded-pill text-light mt-3">Shop Now</a>
     </div>
 </section>
 
@@ -14,64 +13,47 @@
 <section class="product-d-section py-5" id="product">
     <div class="container">
         <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1000">Our Products</h2>
-        
-        <div class="text-center mb-4 d-flex justify-content-center flex-wrap gap-3" data-aos="fade-up" data-aos-duration="1000">
-            <span class="badge bg-secondary badge-pill">Bakery</span>
-            <span class="badge bg-secondary badge-pill">Pastry</span>
-            <span class="badge bg-secondary badge-pill">Cakes</span>
-            <span class="badge bg-secondary badge-pill">Cookies</span>
+
+        <!-- Form Pencarian -->
+        <form method="GET" action="" class="mb-4 text-center">
+            <input type="text" name="search" autocomplete="none" placeholder="Cari produk..."
+                value="<?= htmlspecialchars($search) ?>" class="form-control d-inline-block w-50">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <!-- Menampilkan kategori sebagai filter -->
+        <div class="text-center mb-4 d-flex justify-content-center flex-wrap gap-3">
+            <a href="product.php" class="badge bg-warning badge-pill text-decoration-none">All</a>
+            <?php while ($category = mysqli_fetch_assoc($categoryResult)): ?>
+                <a href="?category=<?= urlencode($category['name']) ?>"
+                    class="badge bg-secondary badge-pill text-decoration-none <?= ($selectedCategory == $category['name']) ? 'bg-primary' : '' ?>">
+                    <?= htmlspecialchars($category['name']) ?>
+                </a>
+            <?php endwhile; ?>
         </div>
 
         <div class="row">
-            <!-- Product Card 1 -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="card product-d-card">
-                    <img src="assets/image/roti.jpg" class="card-img-top" alt="Product 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Short description of the product.</p>
-                        <p class="price">$99.99</p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+            <?php if (mysqli_num_rows($result) > 0): ?>
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-d-card h-100">
+                            <div class="card-body d-flex flex-column text-center">
+                                <img src="admin/public/uploads/<?= htmlspecialchars($row['image']) ?>" alt="Produk"
+                                    class="img-fluid mx-auto d-block"
+                                    style="max-width: 200px; height: 150px; object-fit: cover;">
+                                <h5 class="card-title mt-3"><?= htmlspecialchars($row['product_name']) ?></h5>
+                             
+                                <p class="price">RP. <?= number_format($row['price'], 0, ',', '.') ?></p>
+                                <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-primary mt-auto">Buy Now</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <div class="card product-d-card">
-                    <img src="assets/image/roti.jpg" class="card-img-top" alt="Product 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Short description of the product.</p>
-                        <p class="price">$99.99</p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                <div class="card product-d-card">
-                    <img src="assets/image/roti.jpg" class="card-img-top" alt="Product 3">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Short description of the product.</p>
-                        <p class="price">$99.99</p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-                <div class="card product-d-card">
-                    <img src="assets/image/roti.jpg" class="card-img-top" alt="Product 4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Short description of the product.</p>
-                        <p class="price">$99.99</p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p class="text-center">Tidak ada produk yang ditemukan.</p>
+            <?php endif; ?>
         </div>
+
     </div>
 </section>
 
